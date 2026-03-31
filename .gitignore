@@ -1,0 +1,44 @@
+# Hugo build output — NUNCA commitar, gerado automaticamente
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Hugo cache
+/.cache/
+
+# Dependências de temas externos (se usar no futuro)
+/themes/
+
+# Sistema operacional
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editores de código
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# PowerShell logs gerados pelo deploy.ps1
+deploy-log-*.txt
+
+# Variáveis de ambiente (NUNCA commitar credenciais)
+.env
+.env.local
+.env.*.local
+secrets.toml
+
+# Node (caso instale ferramentas JS no futuro)
+node_modules/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.pyc

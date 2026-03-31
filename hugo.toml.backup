@@ -1,0 +1,63 @@
+baseURL = "https://geladeirausada.com.br/"
+languageCode = "pt-BR"
+title = "Geladeira Usada BH - Entrega 24h em Belo Horizonte e Região"
+theme = ""
+enableRobotsTXT = true
+enableEmoji = true
+canonifyURLs = false
+
+[params]
+  siteName = "Geladeira Usada BH"
+  siteDescription = "Geladeiras usadas seminovas com entrega em 24h em Belo Horizonte, Betim e Contagem. Garantia, qualidade e preço justo."
+  whatsapp = "55319XXXXXXXX"           # PREENCHER: ex. 5531999998888
+  whatsappMessage = "Olá! Vi o anúncio no site e tenho interesse em comprar uma geladeira usada."
+  phone = "(31) 9 XXXX-XXXX"          # PREENCHER: ex. (31) 9 9999-8888
+  email = "contato@geladeirausada.com.br"  # PREENCHER se diferente
+  address = "Belo Horizonte, MG"
+  businessName = "Geladeira Usada BH"
+  cnpj = "00.000.000/0001-00"         # PREENCHER com CNPJ real (ou remover)
+  priceRangeSchema = "$$"
+  defaultImage = "/images/geladeira-default.jpg"
+  gaID = ""                            # PREENCHER: ex. G-XXXXXXXXXX (Google Analytics)
+
+[params.social]
+  instagram = "https://instagram.com/geladeirausadabh"   # PREENCHER
+  facebook  = "https://facebook.com/geladeirausadabh"    # PREENCHER
+
+[outputs]
+  home = ["HTML", "RSS", "sitemap"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
+  bairro = "bairros"
+  modelo = "modelos"
+
+[permalinks]
+  geladeiras = "/geladeira/:slug/"
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+
+[server]
+  [[server.headers]]
+    for = "/**"
+    [server.headers.values]
+      X-Frame-Options = "DENY"
+      X-Content-Type-Options = "nosniff"
+      Referrer-Policy = "strict-origin-when-cross-origin"

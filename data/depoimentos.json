@@ -1,0 +1,44 @@
+[
+  {
+    "nome": "Carla Mendes",
+    "bairro": "Savassi",
+    "nota": 5,
+    "texto": "Comprei a Brastemp Frost Free e ficou muito satisfeita. Entrega foi rápida, no mesmo dia, e o pessoal foi super educado. A geladeira está gelando perfeita!",
+    "data": "2024-11-15"
+  },
+  {
+    "nome": "Roberto Souza",
+    "bairro": "Buritis",
+    "nota": 5,
+    "texto": "Excelente atendimento! A Consul Duplex chegou bem embalada, sem nenhum arranhão. Preço justo e garantia de verdade. Recomendo sem hesitar.",
+    "data": "2024-12-03"
+  },
+  {
+    "nome": "Ana Paula Lima",
+    "bairro": "Pampulha",
+    "nota": 5,
+    "texto": "Já é a segunda geladeira que compro com eles. Confiança total. O técnico explicou tudo sobre o aparelho e ainda deu dicas de como economizar energia.",
+    "data": "2024-10-22"
+  },
+  {
+    "nome": "Marcos Ferreira",
+    "bairro": "Contagem",
+    "nota": 5,
+    "texto": "Minha geleira antiga estragou de noite e precisava de uma urgente. Liguei de manhã e à tarde já tinham entregado a LG Side by Side. Serviço incrível!",
+    "data": "2024-11-30"
+  },
+  {
+    "nome": "Patrícia Oliveira",
+    "bairro": "Betim",
+    "nota": 4,
+    "texto": "Comprei a Samsung e fiquei contente com o preço e a qualidade. Demorou um pouco mais que o esperado para entregar, mas valeu a pena. Nota 9!",
+    "data": "2024-12-10"
+  },
+  {
+    "nome": "João Victor Costa",
+    "bairro": "Venda Nova",
+    "nota": 5,
+    "texto": "Produto perfeito, preço honesto e entrega pontual. A geladeira da Electrolux está funcionando impecavelmente. Já indiquei para três amigos!",
+    "data": "2024-09-18"
+  }
+]

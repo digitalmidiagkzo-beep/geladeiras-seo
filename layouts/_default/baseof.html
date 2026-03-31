@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR" itemscope itemtype="https://schema.org/WebPage">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  {{- $title := .Title -}}
+  {{- $desc := .Description | default .Site.Params.siteDescription -}}
+  {{- $canonical := .Permalink -}}
+  {{- $image := .Params.image | default .Site.Params.defaultImage -}}
+
+  <title>{{ $title }} | {{ .Site.Params.siteName }}</title>
+  <meta name="description" content="{{ $desc }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ $canonical }}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $desc }}">
+  <meta property="og:url" content="{{ $canonical }}">
+  <meta property="og:image" content="{{ $image | absURL }}">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="{{ .Site.Params.siteName }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $desc }}">
+  <meta name="twitter:image" content="{{ $image | absURL }}">
+
+  <!-- Schema LocalBusiness -->
+  {{ partial "schema-localbusiness.html" . }}
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  {{ block "head" . }}{{ end }}
+</head>
+<body>
+  {{ partial "header.html" . }}
+
+  <main id="main-content">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ partial "footer.html" . }}
+
+  <!-- JS -->
+  <script src="/js/main.js" defer></script>
+
+  <!-- WhatsApp Float Button -->
+  {{ partial "whatsapp-float.html" . }}
+
+  {{ block "scripts" . }}{{ end }}
+</body>
+</html>

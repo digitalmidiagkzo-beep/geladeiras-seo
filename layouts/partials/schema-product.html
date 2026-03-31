@@ -1,0 +1,54 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "{{ .Title }}",
+  "image": [
+    "{{ with .Params.image }}{{ . | absURL }}{{ else }}/images/geladeira-placeholder.jpg{{ end }}"
+  ],
+  "description": "{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}",
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ with .Params.marca }}{{ . }}{{ else }}Diversas marcas{{ end }}"
+  },
+  "sku": "{{ with .Params.sku }}{{ . }}{{ else }}{{ .File.UniqueID }}{{ end }}",
+  "itemCondition": "https://schema.org/UsedCondition",
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ .Permalink }}",
+    "priceCurrency": "BRL",
+    "price": "{{ with .Params.preco }}{{ . }}{{ else }}0{{ end }}",
+    "availability": "{{ with .Params.disponibilidade }}{{ . }}{{ else }}https://schema.org/InStock{{ end }}",
+    "itemCondition": "https://schema.org/UsedCondition",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "BRL"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "BR"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 3,
+          "maxValue": 10,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "BR",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 7,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
+    }
+  }
+}
+</script>

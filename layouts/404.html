@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section style="min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:4rem 1rem;">
+  <div>
+    <div style="font-size:5rem;margin-bottom:1rem;">❄️</div>
+    <h1 style="font-family:var(--font-head);font-size:2rem;color:var(--blue-deep);margin-bottom:.75rem;">Página não encontrada</h1>
+    <p style="color:var(--gray-600);margin-bottom:2rem;max-width:400px;margin-inline:auto;">
+      Esta geladeira já pode ter sido vendida! Veja nosso estoque atualizado ou fale conosco pelo WhatsApp.
+    </p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="/" style="background:var(--blue-light);color:#fff;padding:.75rem 1.5rem;border-radius:12px;font-weight:700;text-decoration:none;">← Ver Estoque</a>
+      <a href="https://wa.me/{{ .Site.Params.whatsapp }}" target="_blank" rel="noopener" style="background:var(--green-wa);color:#fff;padding:.75rem 1.5rem;border-radius:12px;font-weight:700;text-decoration:none;">WhatsApp</a>
+    </div>
+  </div>
+</section>
+{{ end }}

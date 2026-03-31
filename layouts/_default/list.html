@@ -1,0 +1,33 @@
+{{ define "main" }}
+<section class="section-lista-header">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    <p class="section-subtitle">{{ .Description }}</p>
+  </div>
+</section>
+
+<section class="section-lista-produtos">
+  <div class="container">
+    <div class="produtos-grid">
+      {{ range .Pages }}
+      <article class="produto-card">
+        <div class="produto-img-wrap">
+          <img
+            src="{{ .Params.image | default "/images/placeholder.svg" }}"
+            alt="{{ .Title }}"
+            loading="lazy"
+            width="300"
+            height="225"
+            onerror="this.src='/images/placeholder.svg'"
+          >
+        </div>
+        <div class="produto-info">
+          <h2 style="font-size:1rem">{{ .Title }}</h2>
+          <a href="{{ .Permalink }}" class="btn-ver-mais">Ver Detalhes e Preço</a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
