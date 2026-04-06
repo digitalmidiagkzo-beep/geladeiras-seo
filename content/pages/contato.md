@@ -6,6 +6,8 @@ description: "Entre em contato com a Geladeira Usada BH pelo WhatsApp, telefone 
 
 date: 2026-04-06
 
+url: /contato/
+
 \---
 
 

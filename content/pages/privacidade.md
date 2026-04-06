@@ -2,7 +2,7 @@
 title: "Política de Privacidade"
 description: "Política de privacidade da Geladeira Usada BH — como tratamos seus dados."
 date: 2026-04-06
-layout: page
+url: /privacidade/
 ---
 
 ## Política de Privacidade
