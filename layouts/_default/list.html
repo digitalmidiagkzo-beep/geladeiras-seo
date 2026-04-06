@@ -1,3 +1,9 @@
+{{ define "head" }}
+{{ if .Params.noindex }}
+<meta name="robots" content="noindex, nofollow">
+{{ end }}
+{{ end }}
+
 {{ define "main" }}
 <section class="section-lista-header">
   <div class="container">
