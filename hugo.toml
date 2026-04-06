@@ -23,11 +23,17 @@ canonifyURLs = false
 [params.social]
   instagram = "https://instagram.com/geladeirausadabh"   # PREENCHER
   facebook  = "https://facebook.com/geladeirausadabh"    # PREENCHER
-
 [outputs]
   home = ["HTML", "RSS", "sitemap"]
   page = ["HTML", "sitemap"]
   section = ["HTML", "RSS", "sitemap"]
+
+[outputFormats]
+  [outputFormats.sitemap]
+    mediaType = "application/xml"
+    baseName = "sitemap"
+    isPlainText = false
+    notAlternative = true
 
 [sitemap]
   changefreq = "weekly"
