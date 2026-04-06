@@ -12,28 +12,22 @@ canonifyURLs = false
   whatsapp = "5531982162270"
   whatsappMessage = "Olá! Vi o anúncio no site e tenho interesse em comprar uma geladeira usada."
   phone = "(31) 9 8216-2270"
-  email = "contato@geladeirausada.com.br"  # PREENCHER se diferente
+  email = "contato@geladeirausada.com.br"
   address = "Belo Horizonte, MG"
   businessName = "Geladeira Usada BH"
-  cnpj = "00.000.000/0001-00"         # PREENCHER com CNPJ real (ou remover)
+  cnpj = "00.000.000/0001-00"
   priceRangeSchema = "$$"
   defaultImage = "/images/geladeira-default.jpg"
-  gaID = ""                            # PREENCHER: ex. G-XXXXXXXXXX (Google Analytics)
+  gaID = ""
 
 [params.social]
-  instagram = "https://instagram.com/geladeirausadabh"   # PREENCHER
-  facebook  = "https://facebook.com/geladeirausadabh"    # PREENCHER
+  instagram = "https://instagram.com/geladeirausadabh"
+  facebook  = "https://facebook.com/geladeirausadabh"
+
 [outputs]
   home = ["HTML", "RSS", "sitemap"]
   page = ["HTML", "sitemap"]
   section = ["HTML", "RSS", "sitemap"]
-
-[outputFormats]
-  [outputFormats.sitemap]
-    mediaType = "application/xml"
-    baseName = "sitemap"
-    isPlainText = false
-    notAlternative = true
 
 [sitemap]
   changefreq = "weekly"
