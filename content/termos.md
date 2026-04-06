@@ -6,6 +6,8 @@ description: "Termos de uso da Geladeira Usada BH — condições de compra e en
 
 date: 2026-04-06
 
+layout: page
+
 \---
 
 

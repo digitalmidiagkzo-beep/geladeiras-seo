@@ -6,6 +6,8 @@ description: "Conheça a Geladeira Usada BH — especialistas em geladeiras usad
 
 date: 2026-04-06
 
+layout: page
+
 \---
 
 
