@@ -1,0 +1,214 @@
+/* ─────────────────────────────────────────────────────────
+   bairros.css — Páginas /bairros/[bairro]/
+   geladeirausada.com.br
+───────────────────────────────────────────────────────── */
+
+:root {
+  --verde-wp: #25D366;
+  --verde-wp-dark: #1da851;
+  --azul: #1a56c4;
+  --azul-dark: #1040a0;
+  --cinza-bg: #f7f8fa;
+  --cinza-borda: #e2e5ea;
+  --texto: #1a1a2e;
+  --texto-muted: #5a6070;
+  --radius: 12px;
+  --shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+
+/* ── Layout base ─────────────────────────── */
+.container        { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
+.container-narrow { max-width: 720px;  margin: 0 auto; padding: 0 1.25rem; }
+section           { padding: 3rem 0; }
+
+/* ── Breadcrumb ─────────────────────────── */
+.breadcrumb { font-size: .82rem; color: var(--texto-muted); margin-bottom: 1.2rem; }
+.breadcrumb a { color: var(--azul); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb span[aria-hidden] { margin: 0 .4rem; }
+
+/* ── Hero ───────────────────────────────── */
+.hero-bairro {
+  background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%);
+  color: #fff;
+  padding: 3.5rem 0 3rem;
+}
+.hero-bairro h1 {
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,.82);
+  max-width: 600px;
+  margin-bottom: 1.8rem;
+  line-height: 1.6;
+}
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-bottom: 2rem;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 20px;
+  padding: .35rem .9rem;
+  font-size: .82rem;
+  color: #fff;
+}
+.badge-icon { color: #4ade80; font-weight: 700; }
+.hero-note { font-size: .8rem; color: rgba(255,255,255,.55); margin-top: .8rem; }
+
+/* ── Botões WhatsApp ────────────────────── */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  background: var(--verde-wp);
+  color: #fff;
+  font-weight: 700;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background .18s, transform .12s;
+}
+.btn-whatsapp:hover { background: var(--verde-wp-dark); transform: translateY(-1px); }
+.btn-hero   { font-size: 1.05rem; padding: .9rem 1.8rem; }
+.btn-inline { font-size: .95rem;  padding: .7rem 1.4rem; margin-top: .8rem; }
+
+/* ── Stats bar ──────────────────────────── */
+.stats-bar { background: #1a2f6b; padding: 1.5rem 0; }
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+.stat strong { display: block; font-size: 1.8rem; font-weight: 800; color: #fff; }
+.stat span   { font-size: .78rem; color: rgba(255,255,255,.65); text-transform: uppercase; letter-spacing: .05em; }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: repeat(2,1fr); } }
+
+/* ── Seção SEO texto ────────────────────── */
+.section-seo { background: #fff; }
+.section-seo h2 { font-size: 1.4rem; font-weight: 700; color: var(--texto); margin-bottom: 1rem; }
+.section-seo p  { color: var(--texto-muted); line-height: 1.75; margin-bottom: .9rem; }
+.section-seo strong { color: var(--texto); }
+
+/* ── Benefícios ─────────────────────────── */
+.section-beneficios { background: var(--cinza-bg); }
+.section-beneficios h2 { font-size: 1.4rem; font-weight: 700; color: var(--texto); margin-bottom: 2rem; text-align: center; }
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+}
+.beneficio {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--cinza-borda);
+}
+.beneficio-icon { font-size: 1.8rem; margin-bottom: .7rem; }
+.beneficio h3   { font-size: 1rem; font-weight: 700; color: var(--texto); margin-bottom: .5rem; }
+.beneficio p    { font-size: .88rem; color: var(--texto-muted); line-height: 1.6; margin: 0; }
+
+/* ── FAQ ────────────────────────────────── */
+.section-faq { background: #fff; }
+.section-faq h2 { font-size: 1.4rem; font-weight: 700; color: var(--texto); margin-bottom: 1.5rem; }
+.faq-lista { display: flex; flex-direction: column; gap: .7rem; }
+.faq-item {
+  border: 1px solid var(--cinza-borda);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.faq-pergunta {
+  padding: 1rem 1.2rem;
+  font-weight: 600;
+  color: var(--texto);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+  font-size: .95rem;
+}
+.faq-pergunta::after { content: "+"; font-size: 1.3rem; color: var(--azul); flex-shrink: 0; }
+details[open] .faq-pergunta::after { content: "−"; }
+.faq-resposta {
+  padding: 0 1.2rem 1rem;
+  color: var(--texto-muted);
+  font-size: .9rem;
+  line-height: 1.7;
+  margin: 0;
+  border-top: 1px solid var(--cinza-borda);
+}
+
+/* ── Vizinhos / Internal linking ────────── */
+.section-vizinhos { background: var(--cinza-bg); }
+.section-vizinhos h2 { font-size: 1.2rem; font-weight: 700; color: var(--texto); margin-bottom: 1.2rem; }
+.vizinhos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+.vizinho-card {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .5rem 1rem;
+  background: #fff;
+  border: 1px solid var(--cinza-borda);
+  border-radius: 20px;
+  font-size: .85rem;
+  color: var(--azul);
+  text-decoration: none;
+  transition: background .15s, border-color .15s;
+}
+.vizinho-card:hover { background: #eef3fc; border-color: var(--azul); }
+.vizinho-icone { font-size: .9rem; }
+
+/* ── CTA Final ──────────────────────────── */
+.section-cta-final {
+  background: linear-gradient(135deg, #0f1b3d 0%, #1a2f6b 100%);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+}
+.section-cta-final h2 { font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: .8rem; }
+.section-cta-final p  { color: rgba(255,255,255,.78); margin-bottom: 1.8rem; font-size: 1rem; }
+.cta-note { font-size: .8rem; color: rgba(255,255,255,.5); margin-top: .8rem; margin-bottom: 0; }
+
+/* ── WhatsApp flutuante ─────────────────── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 56px;
+  height: 56px;
+  background: var(--verde-wp);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(37,211,102,.4);
+  z-index: 999;
+  transition: transform .15s, background .15s;
+}
+.whatsapp-float:hover { transform: scale(1.08); background: var(--verde-wp-dark); }
+
+/* ── Responsivo ─────────────────────────── */
+@media (max-width: 768px) {
+  .hero-bairro { padding: 2.5rem 0 2rem; }
+  .btn-hero    { font-size: .95rem; padding: .8rem 1.4rem; }
+  section      { padding: 2rem 0; }
+}

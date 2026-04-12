@@ -1,0 +1,70 @@
+﻿{{ define "main" }}
+{{- $b := index .Site.Data.bairros .Params.bairro -}}
+{{- $wp := printf "https://wa.me/%s?text=Ola%%21+Geladeira+em+%s" $b.whatsapp (urlize $b.nome) -}}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Geladeira Usada BH","areaServed":"{{ $b.nome }}, {{ $b.cidade }}"}
+</script>
+<section class="hero-home" style="padding:3rem 0 2.5rem">
+<div class="hero-home-bg"></div>
+<div class="container">
+<nav class="breadcrumb" style="margin-bottom:1.25rem"><a href="/">Início</a> › <a href="/bairros/">Regiões</a> › <span style="color:rgba(255,255,255,.6)">{{ $b.nome }}</span></nav>
+<div class="hero-home-content">
+<div class="hero-badge">⚡ ENTREGA EM 24 HORAS</div>
+<h1 style="font-family:var(--font-head);font-size:clamp(1.75rem,5vw,2.75rem);font-weight:800;color:#fff;line-height:1.2;margin-bottom:1rem">Geladeira Usada em <span style="color:#60a5fa">{{ $b.nome }}</span> com Entrega em 24h</h1>
+<p class="hero-sub">{{ $b.texto_hero }}</p>
+<div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem">
+<span style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:.3rem .8rem;border-radius:50px;font-size:.78rem;font-weight:600">✓ Revisadas</span>
+<span style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:.3rem .8rem;border-radius:50px;font-size:.78rem;font-weight:600">✓ 3 meses garantia</span>
+<span style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:.3rem .8rem;border-radius:50px;font-size:.78rem;font-weight:600">✓ Entrega em {{ $b.nome }}</span>
+</div>
+<a href="{{ $wp }}" class="btn-whatsapp btn-large" target="_blank" rel="noopener" style="max-width:380px;display:inline-flex">Ver geladeiras pelo WhatsApp</a>
+</div>
+</div>
+</section>
+<section class="section-stats" style="padding:1.75rem 0">
+<div class="container"><div class="stats-grid">
+<div class="stat-item"><span class="stat-number">500+</span><span class="stat-label">Clientes Satisfeitos</span></div>
+<div class="stat-item"><span class="stat-number">24h</span><span class="stat-label">Tempo de Entrega</span></div>
+<div class="stat-item"><span class="stat-number">60%</span><span class="stat-label">Economia vs Novo</span></div>
+<div class="stat-item"><span class="stat-number">4.9★</span><span class="stat-label">Avaliação Média</span></div>
+</div></div>
+</section>
+<section class="sec-desc">
+<div class="container"><div class="desc-grid">
+<div><h2>Geladeiras Usadas em {{ $b.nome }}</h2><p>{{ $b.paragrafo_seo }}</p>
+<a href="{{ $wp }}" class="btn-whatsapp" style="margin-top:1rem;display:inline-flex;max-width:320px" target="_blank">Ver estoque disponível</a></div>
+<div class="diferenciais"><h3>Por que comprar conosco?</h3><ul>
+<li>🔧 Revisão técnica completa</li>
+<li>🚚 Entrega em {{ $b.nome }} em até 24h</li>
+<li>🛡️ 3 meses de garantia</li>
+<li>💰 Economia de até 60%</li>
+<li>✅ Brastemp, Consul e Electrolux</li>
+</ul></div>
+</div></div>
+</section>
+<section class="sec-faq">
+<div class="container"><h2>Dúvidas sobre geladeira usada em {{ $b.nome }}</h2>
+<div class="faq-lista">
+{{ range $b.faq }}
+<div class="faq-item">
+<button class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">{{ .pergunta }}<span class="faq-seta">+</span></button>
+<div class="faq-r"><p>{{ .resposta }}</p></div>
+</div>
+{{ end }}
+</div></div>
+</section>
+{{ if $b.vizinhos }}
+<section class="section-bairros">
+<div class="container"><h2>Também atendemos regiões próximas</h2>
+<div class="bairros-cloud" style="margin-top:1rem">
+{{ range $b.vizinhos }}<a href="/bairros/{{ .slug }}/" class="bairro-link">📍 {{ .nome }}</a>{{ end }}
+</div></div>
+</section>
+{{ end }}
+<section class="sec-cta-final">
+<div class="container"><div class="cta-final-inner">
+<div class="cta-final-txt"><h2>Pronto para economizar em {{ $b.nome }}?</h2><p>Fale agora e veja as geladeiras disponíveis para entrega hoje.</p></div>
+<a href="{{ $wp }}" class="btn-whatsapp btn-large" target="_blank" rel="noopener" style="flex-shrink:0">Falar pelo WhatsApp</a>
+</div></div>
+</section>
+{{ end }}
