@@ -40,7 +40,7 @@ canonifyURLs = false
       unsafe = true
 
 [taxonomies]
-  bairro = "bairros"
+  
   modelo = "modelos"
 
 [permalinks]
