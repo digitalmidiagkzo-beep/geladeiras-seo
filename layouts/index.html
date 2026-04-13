@@ -78,7 +78,7 @@
             <span class="preco-de">De R$ {{ .preco_original | lang.FormatNumber 0 }}</span>
             <span class="preco-por">R$ {{ .preco | lang.FormatNumber 0 }}</span>
           </div>
-          <a href="/geladeiras/{{ .slug }}-savassi/" class="btn-ver-mais">Ver Detalhes</a>
+          <a href="https://wa.me/{{ $.Site.Params.whatsapp }}?text=Ol%C3%A1%21+Tenho+interesse+na+{{ .nome | urlize }}%2C+est%C3%A1+dispon%C3%ADvel%3F" class="btn-whatsapp" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.65rem 1rem;font-size:.875rem;font-weight:700">Consultar disponibilidade</a>
         </div>
       </article>
       {{ end }}
