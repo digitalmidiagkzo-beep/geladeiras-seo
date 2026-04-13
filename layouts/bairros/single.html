@@ -1,26 +1,26 @@
-ï»¿{{ define "main" }}
+{{ define "main" }}
 {{- $b := index .Site.Data.bairros .Params.bairro -}}
-{{- $wp := printf "https://wa.me/%s?text=Ola%%21+Geladeira+em+%s" $b.whatsapp (urlize $b.nome) -}}
+{{- $wp := printf "https://wa.me/%s?text=Ol%%C3%%A1%%21+Tenho+interesse+em+uma+geladeira+usada+em+%s%%2C+est%%C3%%A1+dispon%%C3%%ADvel%%3F+%%5Bvia%%3A+organico%%5D" $b.whatsapp (urlize $b.nome) -}}
 <style>
 details.faq-item{border:1px solid #e2e8f0;border-radius:10px;overflow:hidden;margin-bottom:.5rem}
 details.faq-item summary{padding:.9rem 1.1rem;font-size:.9rem;font-weight:600;color:#0f172a;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
 details.faq-item summary::-webkit-details-marker{display:none}
 details.faq-item summary::after{content:"+";font-size:1.3rem;color:#2563eb;flex-shrink:0}
-details.faq-item[open] summary::after{content:"âˆ’"}
+details.faq-item[open] summary::after{content:"-"}
 details.faq-item p{padding:.25rem 1.1rem 1rem;font-size:.875rem;color:#475569;line-height:1.7;margin:0;border-top:1px solid #e2e8f0}
 </style>
 <section class="hero-home" style="padding:3rem 0 2.5rem">
 <div class="hero-home-bg"></div>
 <div class="container">
-<nav class="breadcrumb" style="margin-bottom:1.25rem"><a href="/">InÃ­cio</a> â€º <a href="/bairros/">RegiÃµes</a> â€º <span style="color:rgba(255,255,255,.6)">{{ $b.nome }}</span></nav>
+<nav class="breadcrumb" style="margin-bottom:1.25rem"><a href="/">Início</a> › <a href="/bairros/">Regiões</a> › <span style="color:rgba(255,255,255,.6)">{{ $b.nome }}</span></nav>
 <div class="hero-home-content">
-<div class="hero-badge">âš¡ ENTREGA EM 24 HORAS</div>
+<div class="hero-badge">? ENTREGA EM 24 HORAS</div>
 <h1 style="font-family:var(--font-head);font-size:clamp(1.75rem,5vw,2.75rem);font-weight:800;color:#fff;line-height:1.2;margin-bottom:1rem">Geladeira Usada em <span style="color:#60a5fa">{{ $b.nome }}</span> com Entrega em 24h</h1>
 <p class="hero-sub">{{ $b.texto_hero }}</p>
 <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem">
-<span style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:.3rem .8rem;border-radius:50px;font-size:.78rem;font-weight:600">âœ“ Revisadas</span>
-<span style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:.3rem .8rem;border-radius:50px;font-size:.78rem;font-weight:600">âœ“ 3 meses garantia</span>
-<span style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:.3rem .8rem;border-radius:50px;font-size:.78rem;font-weight:600">âœ“ Entrega em {{ $b.nome }}</span>
+<span style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:.3rem .8rem;border-radius:50px;font-size:.78rem;font-weight:600">? Revisadas</span>
+<span style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:.3rem .8rem;border-radius:50px;font-size:.78rem;font-weight:600">? 3 meses garantia</span>
+<span style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:.3rem .8rem;border-radius:50px;font-size:.78rem;font-weight:600">? Entrega em {{ $b.nome }}</span>
 </div>
 <a href="{{ $wp }}" class="btn-whatsapp btn-large" target="_blank" rel="noopener" style="max-width:380px;display:inline-flex">Ver geladeiras pelo WhatsApp</a>
 </div>
@@ -31,24 +31,24 @@ details.faq-item p{padding:.25rem 1.1rem 1rem;font-size:.875rem;color:#475569;li
 <div class="stat-item"><span class="stat-number">500+</span><span class="stat-label">Clientes Satisfeitos</span></div>
 <div class="stat-item"><span class="stat-number">24h</span><span class="stat-label">Tempo de Entrega</span></div>
 <div class="stat-item"><span class="stat-number">60%</span><span class="stat-label">Economia vs Novo</span></div>
-<div class="stat-item"><span class="stat-number">4.9â˜…</span><span class="stat-label">AvaliaÃ§Ã£o MÃ©dia</span></div>
+<div class="stat-item"><span class="stat-number">4.9?</span><span class="stat-label">Avaliação Média</span></div>
 </div></div>
 </section>
 <section class="sec-desc">
 <div class="container"><div class="desc-grid">
 <div><h2>Geladeiras Usadas em {{ $b.nome }}</h2><p>{{ $b.paragrafo_seo }}</p>
-<a href="{{ $wp }}" class="btn-whatsapp" style="margin-top:1rem;display:inline-flex;max-width:320px" target="_blank">Ver estoque disponÃ­vel</a></div>
+<a href="{{ $wp }}" class="btn-whatsapp" style="margin-top:1rem;display:inline-flex;max-width:320px" target="_blank">Ver estoque disponível</a></div>
 <div class="diferenciais"><h3>Por que comprar conosco?</h3><ul>
-<li>ğŸ”§ RevisÃ£o tÃ©cnica completa</li>
-<li>ğŸšš Entrega em {{ $b.nome }} em atÃ© 24h</li>
-<li>ğŸ›¡ï¸ 3 meses de garantia</li>
-<li>ğŸ’° Economia de atÃ© 60%</li>
-<li>âœ… Brastemp, Consul e Electrolux</li>
+<li>?? Revisão técnica completa</li>
+<li>?? Entrega em {{ $b.nome }} em até 24h</li>
+<li>??? 3 meses de garantia</li>
+<li>?? Economia de até 60%</li>
+<li>? Brastemp, Consul e Electrolux</li>
 </ul></div>
 </div></div>
 </section>
 <section class="sec-faq">
-<div class="container"><h2>DÃºvidas sobre geladeira usada em {{ $b.nome }}</h2>
+<div class="container"><h2>Dúvidas sobre geladeira usada em {{ $b.nome }}</h2>
 <div style="margin-top:1.5rem">
 {{ range $b.faq }}
 <details class="faq-item">
@@ -60,15 +60,15 @@ details.faq-item p{padding:.25rem 1.1rem 1rem;font-size:.875rem;color:#475569;li
 </section>
 {{ if $b.vizinhos }}
 <section class="section-bairros">
-<div class="container"><h2>TambÃ©m atendemos regiÃµes prÃ³ximas</h2>
+<div class="container"><h2>Também atendemos regiões próximas</h2>
 <div class="bairros-cloud" style="margin-top:1rem">
-{{ range $b.vizinhos }}<a href="/bairros/{{ .slug }}/" class="bairro-link">ğŸ“ {{ .nome }}</a>{{ end }}
+{{ range $b.vizinhos }}<a href="/bairros/{{ .slug }}/" class="bairro-link">?? {{ .nome }}</a>{{ end }}
 </div></div>
 </section>
 {{ end }}
 <section class="sec-cta-final">
 <div class="container"><div class="cta-final-inner">
-<div class="cta-final-txt"><h2>Pronto para economizar em {{ $b.nome }}?</h2><p>Fale agora e veja as geladeiras disponÃ­veis para entrega hoje.</p></div>
+<div class="cta-final-txt"><h2>Pronto para economizar em {{ $b.nome }}?</h2><p>Fale agora e veja as geladeiras disponíveis para entrega hoje.</p></div>
 <a href="{{ $wp }}" class="btn-whatsapp btn-large" target="_blank" rel="noopener" style="flex-shrink:0">Falar pelo WhatsApp</a>
 </div></div>
 </section>
