@@ -14,3 +14,4 @@
 <section class="sec-faq"><div class="container"><h2>Duvidas sobre geladeira usada em {{ $b.nome }}</h2><div style="margin-top:1.5rem">{{ range $b.faq }}<details class="faq-item"><summary>{{ .pergunta }}</summary><p>{{ .resposta }}</p></details>{{ end }}</div></div></section>
 {{ if $b.vizinhos }}<section class="section-bairros"><div class="container"><h2>Tambem atendemos regioes proximas</h2><div class="bairros-cloud" style="margin-top:1rem">{{ range $b.vizinhos }}<a href="/bairros/{{ .slug }}/" class="bairro-link">{{ .nome }}</a>{{ end }}</div></div></section>{{ end }}
 <section class="sec-cta-final"><div class="container"><div class="cta-final-inner"><div class="cta-final-txt"><h2>Pronto para economizar em {{ $b.nome }}?</h2><p>Fale agora e veja as geladeiras disponiveis para entrega hoje.</p></div><a href="{{ $wp }}" class="btn-whatsapp btn-large" target="_blank" rel="noopener" style="flex-shrink:0">Falar pelo WhatsApp</a></div></div></section>
+{{ end }}
