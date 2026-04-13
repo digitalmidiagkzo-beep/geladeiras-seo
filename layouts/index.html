@@ -141,7 +141,7 @@
     <p class="section-subtitle">Entrega expressa em toda a Região Metropolitana</p>
     <div class="bairros-cloud">
       {{ range $bairros }}
-      <a href="/geladeiras/brastemp-frost-free-420l-{{ .slug }}/" class="bairro-link">
+      <a href="/bairros/{{ .slug }}/" class="bairro-link">
         {{ .nome }}{{ if ne .cidade "Belo Horizonte" }} ({{ .cidade }}){{ end }}
       </a>
       {{ end }}

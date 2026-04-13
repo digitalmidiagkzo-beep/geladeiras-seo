@@ -1,6 +1,6 @@
 {{ define "head" }}
 {{- $geladeira := index (where .Site.Data.geladeiras "slug" .Params.geladeira_slug) 0 -}}
-{{- $bairro := index (where .Site.Data.bairros "slug" .Params.bairro_slug) 0 -}}
+{{- $bairro := index (where .Site.Data.bairrosProdutos "slug" .Params.bairro_slug) 0 -}}
 {{ if $geladeira }}
 {{ partial "schema-faq.html" . }}
 {{ end }}
@@ -9,7 +9,7 @@
 
 {{ define "main" }}
 {{- $geladeira := index (where .Site.Data.geladeiras "slug" .Params.geladeira_slug) 0 -}}
-{{- $bairro := index (where .Site.Data.bairros "slug" .Params.bairro_slug) 0 -}}
+{{- $bairro := index (where .Site.Data.bairrosProdutos "slug" .Params.bairro_slug) 0 -}}
 {{- $faq := .Site.Data.faq -}}
 {{- $wa := .Site.Params.whatsapp -}}
 

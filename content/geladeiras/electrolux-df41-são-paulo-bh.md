@@ -1,9 +1,0 @@
-﻿---
-title: "Electrolux DF41 em São Paulo - Entrega 24h"
-description: "Compre Electrolux DF41 em São Paulo, Belo Horizonte. Revisada, 30 dias garantia. R$ 1200."
-date: 2026-03-28
-geladeira_slug: "electrolux-df41"
-bairro_slug: "são-paulo-bh"
-image: "/images/electrolux-df41-1.jpg"
-noindex: false
----
