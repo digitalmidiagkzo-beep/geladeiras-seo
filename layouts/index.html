@@ -142,7 +142,7 @@
     <div class="bairros-cloud">
       {{ range $bairros }}
       <a href="/bairros/{{ .slug }}/" class="bairro-link">
-        {{ .nome }}{{ if ne .cidade "Belo Horizonte" }} ({{ .cidade }}){{ end }}
+        {{ .nome }}{{ if and (ne .cidade "Belo Horizonte") (ne .nome .cidade) }} ({{ .cidade }}){{ end }}
       </a>
       {{ end }}
     </div>
